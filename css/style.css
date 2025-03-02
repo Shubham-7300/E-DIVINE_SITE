@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+*{
+  font-family: "Besley" , serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s all linear;
+}
+*::selection{
+  background: var(--main);
+  color: #fff;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+section{
+  padding: 2rem 7%;
+}
+html::-webkit-scrollbar{
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--main);
+}
+html::-webkit-scrollbar-track{
+  background: black;
+}
+
+
+/* Global Variables */
+:root{
+  --main : #f01027;
+  --box_shadow: 0 0.5rem 1.5rem  rgba(0, 0, 0, 0.3);
+}
+section{
+  padding: 2rem 7%;
+}
+.btn{
+  background:var(--main) ;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+}
+.btn:hover{
+  letter-spacing: 0.2rem;
+}
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+}
+.heading span{
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+/* ------------------ Navbar/Header Start --------------------*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #707070;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 9%;
+}
+.header .logo img{
+  height: 6rem;
+}
+.header .navbar a{
+  color:bisque;
+  font-size: 1.7rem;
+  margin-left: 2rem;
+}
+.header .navbar a:hover{
+  color: var(--main);
+}
+#menuBars{
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  display: none;
+
+}
+/* ------------------ Navbar/Header End --------------------*/
+/* ------------------ Home Section Start --------------------*/
+.home{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url("/images/concertImg.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.home .content{
+  max-width: 60rem;
+  color: #fff;
+}
+.home .content h3{
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  padding-top: 5rem;
+}
+.home .content p{
+  font-weight: lighter;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding-top: 1rem 0;
+}
+.home .content a{
+  position: relative;
+  top: 4rem;
+}
+/* ------------------ Home Section End --------------------*/
+
+/* ------------------ About Us Section Start --------------------*/
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.about .row .img{
+  flex: 1 1 45rem ;
+  padding: 1rem ;
+}
+.about .row .img img{
+  width: 100%;
+  height: 75vh;
+  border:0.7rem solid var(--main);
+  border-radius: 0.6rem;
+}
+.about .row .content{
+  flex: 1 1 45rem;
+}
+.about .row .content h3{
+  font-size: 3.5rem;
+}
+.about .row .content p{
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+/* ------------------ About Us Section End --------------------*/
+/* ------------------ Services Section End --------------------*/
+
+.services .boxContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+  gap: 1.5rem;
+}
+.services .boxContainer .box{
+  background: #707070;
+  /* background: #000; */
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.services .boxContainer .box:hover i{
+  transform: scale(1.1);
+}
+.services .boxContainer .box i{
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--main);
+}
+.services .boxContainer .box h3{
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+.services .boxContainer .box p{
+  line-height: 1.8;
+  color: #eee;
+  font-size: 1.4rem;
+}
+/* ------------------ Services Section End --------------------*/
+/* ------------------ Gallery Section Start --------------------*/
+
+
+.gallery .boxContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,15fr));
+  gap: 1.5rem;
+}
+.gallery .boxContainer.box{
+  position: relative;
+  border-radius: 0.5rem;
+  border: 2rem solid var(--main);
+  overflow: hidden;
+  cursor: pointer;
+  height: 25rem;
+}
+.gallery .boxContainer.box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery .boxContainer .box:hover img{
+  transform: scale(1.2);
+}
+.gallery .boxContainer .box .title{
+  position: relative;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--main);
+}
+.gallery .boxContainer .box .icons{
+  position: relative;
+  bottom: 6.5rem;
+  left: 0;
+  right: 0;
+  background: var(--main);
+  text-align: center;
+  padding-top: 0.3rem;
+  
+}
+.gallery .boxContainer .box:hover .icons{
+  bottom: 0vh;
+}
+.gallery .boxContainer .box .icons a{
+  color: #fff;
+  margin: 0.5rem 1rem ;
+  font-size: 2rem;
+}
+.gallery .boxContainer .box .icons a:hover{
+  color: #000;
+}
+/* ------------------ Gallery Section End --------------------*/
+/* ------------------ Review Section Start --------------------*/
+
+.review .box{
+  border-radius: 0.5rem;
+  background: #707070;
+  padding: 2rem;
+  position: relative;
+  height: 50vh;
+  border: 2px solid lightcoral;
+
+}
+.review .box:hover{
+  transform: scale(1.04);
+}
+.review .box .fa-quote-right{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--main);
+  font-size: 5rem;
+}
+.review .box .img{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+
+}
+.review .box .img img{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review .box .img h3{
+  color: #fff;
+  font-size: 2rem;
+}
+.review .box.img span{
+  font-size: 2rem;
+  color: #ccc;
+}
+.review .box p{
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* ------------------ Review Section End --------------------*/
+/* --------------------- Contact Section Start --------------- */
+.contact{
+  margin-bottom: 200px;
+}
+.contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.contact form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.contact .inputBox input , .contact textarea{
+  width: 100%;
+  background:#707070;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-transform: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0.7rem 0;
+
+}
+.contact .inputBox input::placeholder , .contact textarea::placeholder{
+ color: #eee;
+ text-transform: capitalize;
+}
+.contact .inputBox input:focus , .contact textarea:focus{
+  background: #333;
+}
+.contact .inputBox input{
+  width: 49%;
+}
+.contact from textarea{
+  resize: none;
+}
+
+/* --------------------- Contact Section End ----------------- */
+
+/* --------------------- Footer Section Start ---------------- */
+
+footer{
+  background: var(--main);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2vh;
+}
+.last{
+  display: flex;
+  justify-content: space-around;
+}
+.last .appPara{
+  text-align: center;
+  color: #222;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.last #appIcons{
+  color: #fff;
+  padding: 1rem;
+}
+.last a{
+  color: #fff;
+  font-size: 2rem;
+}
+.tags{
+  text-align: center;
+  padding: 2.5rem;
+}
+.tags p{
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.tags a{
+  color: #fff;
+  font-size: 1.6rem;
+}
+/* --------------------- Footer Section End ---------------- */
+
+/* --------------------- Toggle Theme Start ------------------ */
+.toggleTheme{
+  position: fixed;
+  top: 10rem;
+  right: -20rem;
+  background: #707070;
+  z-index: 10000;
+  text-align: center;
+  width: 20rem;
+}
+.toggleTheme.active{
+  right: 0;
+}
+.toggleTheme h3{
+  /* color: #fff; */
+  color: #222;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.toggleTheme .toggleBtn{
+  position: absolute;
+  top: 0;
+  left: -5.9rem;
+  padding: 1.3rem 1.5rem;
+  background: #707070 ;
+  cursor: pointer;
+}
+.toggleTheme .toggleBtn i{
+  color: #fff;
+  font-size: 3rem;
+  animation: toggleSpin 3.5s linear infinite;
+}
+.toggleTheme .buttons{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.toggleTheme .buttons .themeBtn{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes toggleSpin{
+  0%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/* --------------------- Toggle Theme End ------------------ */
+
+/* --------------------- Media Queries -----------------------*/
+
+@media (max-width:991px) {
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding: 1.5rem 2rem;
+  }
+}
+@media (max-width:768px) {
+  #menuBars{
+    display: initial;
+  }
+ .header .navbar{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-top: 0.2rem solid #222;
+  background: #000;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+ }
+ .header .navbar.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+ } 
+ .header .navbar a{
+  display: flex;
+  background:#333;
+  font-size: 2rem;
+  margin: 1.3rem;
+  padding: 1.3rem;
+  border-radius: 0.3rem;
+ }
+ .fa-times{
+  transform: rotate(180deg);
+ }
+ .home{
+  background-position: left;
+  justify-content: center;
+  text-align: center;
+ }
+ .home .content h3{
+  font-size: 4rem;
+ }
+ .home .content p{
+  font-size: 1.5rem;
+ }
+}
+@media (max-width:450px) {
+  html{
+    font-size: 50%;
+  }
+  .contact from .inputBox input {
+    width: 100%;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
